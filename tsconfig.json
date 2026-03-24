@@ -20,7 +20,11 @@
     "disableSizeLimit": true,
     "preserveConstEnums": true,
     "sourceMap": false,
-    "lib": ["ES2015", "ES2016", "ES2017", "ES2018", "ES2019", "ES2020", "ESNext"]
+    "lib": ["ES2015", "ES2016", "ES2017", "ES2018", "ES2019", "ES2020", "ESNext"],
+    "paths": {
+      "#types/*": ["./types/*"],
+      "#types": ["./types"]
+    }
   },
   "include": ["src"]
 }
