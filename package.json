@@ -1,0 +1,37 @@
+{
+  "name": "@oxwmay-labs/mtools",
+  "version": "0.1.0",
+  "description": "mtools",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p ./",
+    "watch": "tsc -w -p ./",
+    "clean": "rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oxwmay/mtools.git"
+  },
+  "keywords": [],
+  "author": "oxwmay",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/oxwmay/mtools/issues"
+  },
+  "homepage": "https://github.com/oxwmay/mtools#readme",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
