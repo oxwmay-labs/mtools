@@ -10,8 +10,10 @@ type CurriedProp = (
     <T extends AnyObject>(_object: T) => T[Key]
   );
 
-export const prop: CurriedProp = curry((field: string, object: AnyObject) => {
+const prop: CurriedProp = curry((field: string, object: AnyObject) => {
   const keys = field.split('.');
 
   return keys.reduce((o: any, k: string) => o?.[k], object);
 });
+
+export default prop;

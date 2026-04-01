@@ -11,7 +11,7 @@ describe('fp', () => {
     age: 30
   };
 
-  describe('fp', () => {
+  describe('prop', () => {
     it('should get by field', () => {
       expect(fp.prop('age', user)).toBe(user.age);
       expect(fp.prop('age')(user)).toBe(user.age);
@@ -26,6 +26,24 @@ describe('fp', () => {
       expect(users.map(fp.prop('name.first'))).toStrictEqual([user.name.first]);
       expect(users.map(fp.prop('name.last'))).toStrictEqual([user.name.last]);
       expect(users.map(fp.prop('name.middle'))).toStrictEqual([undefined]);
+    });
+  });
+
+  describe('keys', () => {
+    it('should get keys of object', () => {
+      expect(fp.keys(user)).toStrictEqual(Object.keys(user));
+    });
+  });
+
+  describe('value', () => {
+    it('should get values of object', () => {
+      expect(fp.values(user)).toStrictEqual(Object.values(user));
+    });
+  });
+
+  describe('entries', () => {
+    it('should get entries of object', () => {
+      expect(fp.entries(user)).toStrictEqual(Object.entries(user));
     });
   });
 });
